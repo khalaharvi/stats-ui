@@ -1,0 +1,22 @@
+{
+  "name": "stats_ui_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "krishna halaharvi",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp.spritesmith": "^6.2.0",
+    "jshint": "^2.9.1",
+    "merge-stream": "^1.0.0"
+  }
+}

@@ -1,0 +1,45 @@
+[
+    [
+            {
+                "count": "80",
+				"countTxt":"Buyer logins",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"523"
+            },
+            {
+                "count": "233",
+				"countTxt":"Searches",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"628"
+            },
+            {
+                "count": "533",
+				"countTxt":"Views of our member pages",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"2,365"
+            }
+        ],
+	
+	
+    [
+            {
+                "count": "80",
+				"countTxt":"Total vists",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"412"
+            },
+            {
+                "count": "53",
+				"countTxt":"Unique visitors",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"731"
+            },
+            {
+                "count": "1:12 min",
+				"countTxt":"Total time spent on page",
+				"participantsTxt":"Total for all participating member companies:",
+				"participantCount":"784.2 mins"
+            }
+        ]
+   
+]

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="statusApp">
+    <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Stats Test</title>
+        
+        <link href="assets/libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/sprites/stats_sprites.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row bg">
+                <div ng-view></div>
+            </div>
+        </div>
+        <script src="assets/libs/jquery/dist/jquery.js"></script>
+        <script src="assets/libs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="assets/libs/angular/angular.js"></script>
+        <script src="assets/libs/angular-route/angular-route.js"></script>
+        <script src="assets/libs/angular-animate/angular-animate.js"></script>
+        
+        <script src="app/app.js"></script>
+        <script src="app/app.routes.js"></script>
+        
+        <script src="app/services/statsService.js"></script>
+        
+        <script src="app/controllers/mainController.js"></script>
+        <script src="app/controllers/summaryController.js"></script>
+        <script src="app/controllers/trafficController.js"></script>
+        
+    </body>
+</html>

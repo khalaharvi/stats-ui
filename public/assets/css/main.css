@@ -1,0 +1,86 @@
+.bg {
+  height: 385px; }
+
+.Bottom_Band {
+  background-color: #f9f9f9;
+  min-height: 350px; }
+
+.btn {
+  border-radius: 0; }
+
+.nav_button_column {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0; }
+
+.selected_tab {
+  background-color: #f9f9f9;
+  font-weight: bold; }
+
+.btn:hover {
+  text-decoration: none;
+  color: inherit; }
+
+.unselected_tab {
+  background-color: #00aeef;
+  color: white; }
+
+.Divider_1 {
+  background: #f9f9f9;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #f9f9f9, #f1f1f1);
+  background: -o-linear-gradient(right, #f9f9f9, #f1f1f1);
+  background: -moz-linear-gradient(right, #f9f9f9, #f1f1f1);
+  background: linear-gradient(to right, #f9f9f9, #f1f1f1);
+  min-height: 350px; }
+
+.buyer_stats {
+  font-size: 85px;
+  font-family: "Helvetica Neue";
+  color: #0075b5;
+  text-transform: uppercase;
+  line-height: 1;
+  padding-top: 5%; }
+
+.member_stats {
+  font-size: 85px;
+  font-family: "Helvetica Neue";
+  color: #00aeef;
+  text-transform: uppercase;
+  line-height: 1;
+  padding-top: 5%; }
+
+.member_stats_extra {
+  font-size: 35px;
+  font-family: "Helvetica Neue";
+  color: #00aeef;
+  text-transform: uppercase; }
+
+.total_visits_title {
+  font-size: 11pt;
+  font-family: "Helvetica Neue";
+  color: black;
+  text-transform: uppercase;
+  padding-bottom: 10%; }
+
+img {
+  border: 0; }
+
+.summary_tab_text {
+  font-size: 10pt;
+  font-family: "Helvetica Neue";
+  color: rgba(0, 0, 0, 0.502); }
+
+.summary_tab_total_count {
+  font-size: 20pt;
+  font-family: "Helvetica Neue";
+  color: #019ed8;
+  line-height: 1.2;
+  text-transform: uppercase; }
+
+.summary_tab_total_count_extra {
+  font-size: 15pt;
+  font-family: "Helvetica Neue";
+  color: #019ed8;
+  line-height: 1.2;
+  text-transform: uppercase; }

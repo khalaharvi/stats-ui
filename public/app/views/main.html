@@ -1,0 +1,72 @@
+<div class="col-xs-12 col-md-12 nav_button_column">
+    <div class="row">
+    <nav>
+        <div class="col-xs-6 col-md-6  nav_button_column">
+        <button class="btn btn-lg btn-block" ng-click="main.SelectNavButton('Summary')" ng-class="main.summaryTab">Summary</button>
+        </div>
+        <div class="col-xs-6 col-md-6 nav_button_column">
+        <button class="btn btn-lg btn-block" ng-click="main.SelectNavButton('Traffic')" ng-class="main.trafficTab">Member Page Traffic</button>
+        </div>
+    </nav>
+    </div>
+</div>
+
+<div class="col-xs-12 col-md-12 Bottom_Band " ng-show="main.showSummaryContent" ng-hide="main.showMemberContent">
+    <div class="row" >
+    <div class="col-xs-12 col-md-4 Divider_1" ng-repeat="data in main.summaryData">
+        
+        
+        <div class="row text-left" style="padding-left:20%; padding-top:10%;">
+                                    
+                     <div class="col-xs-12 col-md-12 hidden-xs" ng-switch on="data.countTxt">
+                         <div ng-switch-when="Buyer logins" class="icon-login_Icon"></div>
+                         <div ng-switch-when="Searches" class="icon-user_Icon"></div>
+                         <div ng-switch-when="Views of our member pages" class="icon-view_Icon"></div>
+                     </div>
+                     <div class="col-xs-12 col-xs-offset-3 visible-xs-block" ng-switch on="data.countTxt">
+                         <div ng-switch-when="Buyer logins" class="icon-login_Icon"></div>
+                         <div ng-switch-when="Searches" class="icon-user_Icon "></div>
+                         <div ng-switch-when="Views of our member pages" class="icon-view_Icon "></div>
+                     </div>
+                     <div ng-switch on="data.countTxt">
+                        <div ng-switch-when="Views of our member pages" class="col-xs-12 col-md-12 member_stats">{{data.count.split(" ")[0]}}<span class="member_stats_extra"> {{data.count.split(" ")[1]}}</span></div> 
+                        <div ng-switch-default class="col-xs-12 col-md-12 buyer_stats">{{data.count.split(" ")[0]}}<span class="member_stats_extra"> {{data.count.split(" ")[1]}}</span></div>
+                     </div>
+                     <div class="col-xs-12 col-md-12 total_visits_title"><strong>{{data.countTxt}}</strong></div>
+                     
+                     <div class="col-xs-12 col-sm-12 col-md-12 summary_tab_text"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{data.participantsTxt}}</div></div></div>
+                     <div class="col-xs-12 col-md-12 summary_tab_total_count">{{data.participantCount}}</div>
+            
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="col-xs-12 col-md-12 Bottom_Band " ng-hide="main.showSummaryContent" ng-show="main.showMemberContent">
+    <div class="row">
+    <div class="col-xs-12 col-md-4 col-xs-12 Divider_1" ng-repeat="traffic in main.memberTrafficData">
+        
+        
+        <div class="row text-left" style="padding-left:20%; padding-top:10%;">
+                     <div class="col-xs-12 col-md-12 hidden-xs" ng-switch on="traffic.countTxt">
+                         <div ng-switch-when="Total vists" class="icon-totalvisits_Icon"></div>
+                         <div ng-switch-when="Unique visitors" class="icon-user_Icon"></div>
+                         <div ng-switch-when="Total time spent on page" class="icon-totaltimespent_Icon"></div>
+                     </div>
+                     <div class="col-xs-12 col-xs-offset-3 visible-xs-block" ng-switch on="data.countTxt">
+                         <div ng-switch-when="Buyer logins" class="icon-login_Icon"></div>
+                         <div ng-switch-when="Searches" class="icon-user_Icon "></div>
+                         <div ng-switch-when="Views of our member pages" class="icon-view_Icon "></div>
+                     </div>
+                     <div ng-switch on="traffic.countTxt">
+                        <div ng-switch-when="Total time spent on page" class="col-xs-12 col-md-12 member_stats">{{traffic.count.split(" ")[0]}}<span class="member_stats_extra"> {{traffic.count.split(" ")[1]}}</span></div> 
+                        <div ng-switch-default class="col-xs-12 col-md-12 buyer_stats">{{traffic.count.split(" ")[0]}}<span class="member_stats_extra"> {{traffic.count.split(" ")[1]}}</span></div>
+                     </div>
+                     <div class="col-xs-12 col-md-12 total_visits_title"><strong>{{traffic.countTxt}}</strong></div>
+                     
+                     <div class="col-xs-12 col-sm-12 col-md-12 summary_tab_text"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{traffic.participantsTxt}}</div></div></div>
+                     <div class="col-xs-12 col-md-12 summary_tab_total_count">{{traffic.participantCount.split(" ")[0]}}<span class="summary_tab_total_count_extra"> {{traffic.participantCount.split(" ")[1]}}</span></div>
+            </div>
+    </div>
+    </div>
+</div>

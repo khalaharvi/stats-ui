@@ -1,6 +1,3 @@
-.bg {
-  height: 385px; }
-
 .Bottom_Band {
   background-color: #f9f9f9;
   min-height: 350px; }
@@ -8,10 +5,17 @@
 .btn {
   border-radius: 0; }
 
+.btn:focus {
+  outline: none; }
+
 .nav_button_column {
   padding-left: 0;
   padding-right: 0;
   border-radius: 0; }
+
+.panel_content {
+  padding-left: 20%;
+  padding-top: 10%; }
 
 .selected_tab {
   background-color: #f9f9f9;
@@ -25,38 +29,44 @@
   background-color: #00aeef;
   color: white; }
 
-.Divider_1 {
+.icon_placing {
+  padding-top: 15%; }
+
+.panel_gradient {
   background: #f9f9f9;
-  /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #f9f9f9, #f1f1f1);
   background: -o-linear-gradient(right, #f9f9f9, #f1f1f1);
   background: -moz-linear-gradient(right, #f9f9f9, #f1f1f1);
   background: linear-gradient(to right, #f9f9f9, #f1f1f1);
   min-height: 350px; }
 
-.buyer_stats {
-  font-size: 85px;
+.panel_gradient_mobile {
+  background: #f9f9f9;
+  background: -webkit-linear-gradient(#f9f9f9, #f1f1f1);
+  background: -o-linear-gradient(#f9f9f9, #f1f1f1);
+  background: -moz-linear-gradient(#f9f9f9, #f1f1f1);
+  background: linear-gradient(#f9f9f9, #f1f1f1);
+  min-height: 350px; }
+
+.counter, .stat_counter, .stat_counter_lite, .stat_counter_lite_extra {
   font-family: "Helvetica Neue";
-  color: #0075b5;
   text-transform: uppercase;
   line-height: 1;
   padding-top: 5%; }
 
-.member_stats {
+.stat_counter {
   font-size: 85px;
-  font-family: "Helvetica Neue";
-  color: #00aeef;
-  text-transform: uppercase;
-  line-height: 1;
-  padding-top: 5%; }
+  color: #0075b5; }
 
-.member_stats_extra {
+.stat_counter_lite {
+  font-size: 85px;
+  color: #00aeef; }
+
+.stat_counter_lite_extra {
   font-size: 35px;
-  font-family: "Helvetica Neue";
-  color: #00aeef;
-  text-transform: uppercase; }
+  color: #00aeef; }
 
-.total_visits_title {
+.stat_title {
   font-size: 11pt;
   font-family: "Helvetica Neue";
   color: black;
@@ -66,19 +76,19 @@
 img {
   border: 0; }
 
-.summary_tab_text {
+.participants_text {
   font-size: 10pt;
   font-family: "Helvetica Neue";
-  color: rgba(0, 0, 0, 0.502); }
+  color: gray; }
 
-.summary_tab_total_count {
+.participant_total_count {
   font-size: 20pt;
   font-family: "Helvetica Neue";
   color: #019ed8;
   line-height: 1.2;
   text-transform: uppercase; }
 
-.summary_tab_total_count_extra {
+.participant_total_count_extra {
   font-size: 15pt;
   font-family: "Helvetica Neue";
   color: #019ed8;

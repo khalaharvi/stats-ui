@@ -1,3 +1,4 @@
+'use strict';
 angular.module('statusApp')
 .factory('StatusFactory', function($http){
     var statusFactory = {};

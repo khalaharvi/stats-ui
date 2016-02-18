@@ -1,68 +1,89 @@
-@import summary
-@import traffic
 
+$base-color: #f9f9f9
+$base-height: 350px
+$base-font-family: "Helvetica Neue"
+$stat-counter-color: #0075b5
+$stat-counter-color-light: #00aeef
+$stat-counter-size: 85px;
+$stat-counter-extra-size: 35px;
+$stat_title-size: 11pt;
+$gradient-right-color: #f1f1f1
+$participants_text-size: 10pt
+$participant_total_count-color: #019ed8
 
-.bg 
-  height: 385px
-  
+ 
 .Bottom_Band 
-  background-color: #f9f9f9
-  min-height: 350px
+  background-color: $base-color
+  min-height: $base-height
   
 .btn
     border-radius: 0
+
+.btn:focus
+  outline: none
 
 .nav_button_column
     padding-left: 0
     padding-right: 0
     border-radius: 0
 
+.panel_content
+  padding-left: 20%
+  padding-top: 10%
+
 .selected_tab
-    background-color: #f9f9f9
+    background-color: $base-color
     font-weight: bold
     
 .btn:hover
     text-decoration: none
-    color: inherit;
+    color: inherit
     
 .unselected_tab
     background-color: #00aeef
     color: white
 
-.Divider_1 
-  background: #f9f9f9; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #f9f9f9 , #f1f1f1)
-  background: -o-linear-gradient(right, #f9f9f9, #f1f1f1)
-  background: -moz-linear-gradient(right, #f9f9f9, #f1f1f1)
-  background: linear-gradient(to right,#f9f9f9, #f1f1f1)
-  min-height: 350px
+.icon_placing
+  padding-top: 15%
+  
+.panel_gradient
+  background: $base-color
+  background: -webkit-linear-gradient(left, $base-color , $gradient-right-color)
+  background: -o-linear-gradient(right, $base-color, $gradient-right-color)
+  background: -moz-linear-gradient(right, $base-color, $gradient-right-color)
+  background: linear-gradient(to right,$base-color, $gradient-right-color)
+  min-height: $base-height
 
-.buyer_stats 
-  font-size: 85px;
-  font-family: "Helvetica Neue"
-  color: rgb(0, 117, 181)
+.panel_gradient_mobile
+  background: $base-color
+  background: -webkit-linear-gradient( $base-color , $gradient-right-color)
+  background: -o-linear-gradient($base-color, $gradient-right-color)
+  background: -moz-linear-gradient($base-color, $gradient-right-color)
+  background: linear-gradient($base-color, $gradient-right-color)
+  min-height: $base-height
+
+.counter, .stat_counter, .stat_counter_lite, .stat_counter_lite_extra
+  font-family: $base-font-family
   text-transform: uppercase
   line-height: 1
   padding-top: 5%;
-  
-.member_stats
-  font-size: 85px;
-  font-family: "Helvetica Neue";
-  color: rgb(0, 174, 239);
-  text-transform: uppercase;
-  line-height: 1
-  padding-top: 5%;
-  
-.member_stats_extra
-  font-size: 35px;
-  font-family: "Helvetica Neue";
-  color: rgb(0, 174, 239);
-  text-transform: uppercase;
 
-.total_visits_title
-  font-size: 11pt
-  font-family: "Helvetica Neue"
-  color: rgb(0, 0, 0)
+.stat_counter
+  font-size: $stat-counter-size 
+  color: $stat-counter-color
+  
+.stat_counter_lite
+  font-size: $stat-counter-size
+  color: $stat-counter-color-light
+  
+.stat_counter_lite_extra
+  font-size: $stat-counter-extra-size
+  color: $stat-counter-color-light
+
+.stat_title
+  font-size: $stat_title-size
+  font-family: $base-font-family
+  color: black
   text-transform: uppercase
   padding-bottom: 10%
   
@@ -70,21 +91,21 @@
 img
   border: 0
   
-.summary_tab_text
-  font-size: 10pt;
-  font-family: "Helvetica Neue";
-  color: rgba(0, 0, 0, 0.502);
+.participants_text
+  font-size: $participants_text-size
+  font-family: $base-font-family
+  color: gray
   
-.summary_tab_total_count
-  font-size: 20pt;
-  font-family: "Helvetica Neue";
-  color: rgb(1, 158, 216);
+.participant_total_count
+  font-size: $participants_text-size*2
+  font-family: $base-font-family
+  color: $participant_total_count-color
   line-height: 1.2
   text-transform: uppercase
   
-.summary_tab_total_count_extra
+.participant_total_count_extra
   font-size: 15pt;
-  font-family: "Helvetica Neue";
-  color: rgb(1, 158, 216);
+  font-family: $base-font-family
+  color: $participant_total_count-color
   line-height: 1.2
   text-transform: uppercase

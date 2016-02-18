@@ -1,3 +1,4 @@
+'use strict';
 angular.module('statusApp')
 .controller('MainController', ['StatusFactory', function(StatusFactory){
     var vm = this;

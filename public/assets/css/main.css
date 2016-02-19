@@ -3,10 +3,8 @@
   min-height: 350px; }
 
 .btn {
-  border-radius: 0; }
-
-.col-md-6 {
-  padding-right: 0; }
+  border-radius: 0;
+  font-size: 12pt; }
 
 .btn:focus {
   outline: none; }
@@ -102,7 +100,7 @@ img {
   animation-duration: 3s;
   animation-name: slideleft; }
 
-.panel_gradient_mobile {
+.icon_placing, .stat_counter, .stat_counter_lite, .stat_counter_lite_extra, .stat_title {
   animation-duration: 3s;
   animation-name: slideup; }
 

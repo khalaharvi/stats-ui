@@ -100,19 +100,9 @@ img {
   animation-duration: 3s;
   animation-name: slideleft; }
 
-.icon_placing, .stat_counter, .stat_counter_lite, .stat_counter_lite_extra, .stat_title {
-  animation-duration: 3s;
-  animation-name: slideup; }
-
 @keyframes slideleft {
   from {
     margin-left: 100%; }
   to {
     margin-left: 0%;
     padding-left: 20%; } }
-
-@keyframes slideup {
-  from {
-    margin-top: 100%; }
-  to {
-    margin-top: 0%; } }

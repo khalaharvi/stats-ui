@@ -9,6 +9,7 @@ angular.module('statusApp')
     vm.summaryData = {};
     vm.memberTrafficData = {};
     
+    
     function getStatsData()
     {
         StatusFactory.getStatsData()

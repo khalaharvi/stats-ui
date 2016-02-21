@@ -4,4 +4,4 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static('public'));
 
-app.listen(port, function(){console.log("View the content using http://localhost:"+port)});
+app.listen(port, function(){console.log("View the content using http://localhost:"+port);});

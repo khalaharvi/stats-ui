@@ -25,13 +25,13 @@
                      </div>
                      
                      <div ng-switch on="data.countTxt">
-                        <div ng-switch-when="Views of our member pages" class="col-xs-12 col-md-12 stat_counter_lite">{{data.count.split(" ")[0]}}<span class="stat_counter_lite_extra"> {{data.count.split(" ")[1]}}</span></div> 
-                        <div ng-switch-default class="col-xs-12 col-md-12 stat_counter">{{data.count.split(" ")[0]}}</div>
+                        <div ng-switch-when="Views of our member pages" class="col-xs-12 col-md-12 stat_counter_lite">{{data.count}}</div> 
+                        <div ng-switch-default class="col-xs-12 col-md-12 stat_counter">{{data.count}}</div>
                      </div>
                      <div class="col-xs-12 col-md-12 stat_title"><strong>{{data.countTxt}}</strong></div>
                      
                      <div class="col-xs-12 col-sm-12 col-md-12 participants_text"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{data.participantsTxt}}</div></div></div>
-                     <div class="col-xs-12 col-md-12 participant_total_count">{{data.participantCount}}</div>
+                     <div class="col-xs-12 col-md-12 participant_total_count">{{data.participantCount | number}}</div>
             
         </div>
         <div class="row text-left  panel_gradient_mobile visible-xs-block visible-sm-block" >
@@ -43,13 +43,13 @@
                      </div>
                      
                      <div ng-switch on="data.countTxt">
-                        <div ng-switch-when="Views of our member pages" class="col-xs-10 stat_counter_lite">{{data.count.split(" ")[0]}}<span class="stat_counter_lite_extra"> {{data.count.split(" ")[1]}}</span></div> 
-                        <div ng-switch-default class="col-xs-10 stat_counter">{{data.count.split(" ")[0]}}</div>
+                        <div ng-switch-when="Views of our member pages" class="col-xs-10 stat_counter_lite">{{data.count}}</div> 
+                        <div ng-switch-default class="col-xs-10 stat_counter">{{data.count}}</div>
                      </div>
                      <div class="col-xs-10 col-xs-offset-2 stat_title"><strong>{{data.countTxt}}</strong></div>
                      
                      <div class="col-xs-10 col-xs-offset-2 participants_text"><div class="row"><div class="col-xs-8">{{data.participantsTxt}}</div></div></div>
-                     <div class="col-xs-10 col-xs-offset-2  participant_total_count">{{data.participantCount}}</div>
+                     <div class="col-xs-10 col-xs-offset-2  participant_total_count">{{data.participantCount | number}}</div>
             
         </div>
     </div>
@@ -97,4 +97,8 @@
     
     </div>
     </div>
+</div>
+
+<div class="col-xs-12 col-md-12" ng-if="main.showSummaryContent">
+    <button class="btn btn-lg btn-block" ng-click="main.Animate()">Mock Live Stats</button>
 </div>

@@ -4,7 +4,8 @@
 
 .btn {
   border-radius: 0;
-  font-size: 12pt; }
+  font-size: 12pt;
+  background-color: #00aeef; }
 
 .btn:focus {
   outline: none; }

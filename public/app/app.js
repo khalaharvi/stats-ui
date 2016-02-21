@@ -1,1 +1,1 @@
-angular.module('statusApp',['app.routes']);
+angular.module('statusApp',['app.routes','ngAnimate']);

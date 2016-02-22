@@ -31,3 +31,7 @@ gulp.task('sprite', function () {
   
   return spriteData.pipe(gulp.dest('public/assets/sprites/'));
 });
+
+gulp.task('build',['sass','sprite'], function(){
+    
+});

@@ -18,38 +18,38 @@
         
         <div class="row text-left panel_content panel_gradient hidden-xs hidden-sm" >
                                     
-                     <div class="col-xs-12 col-md-12" ng-switch on="data.countTxt">
+                     <div class="col-xs-12 col-md-12 move_to_left" ng-switch on="data.countTxt">
                          <div ng-switch-when="Buyer logins" class="icon-login_Icon"></div>
                          <div ng-switch-when="Searches" class="icon-user_Icon"></div>
                          <div ng-switch-when="Views of our member pages" class="icon-view_Icon"></div>
                      </div>
                      
                      <div ng-switch on="data.countTxt">
-                        <div ng-switch-when="Views of our member pages" class="col-xs-12 col-md-12 stat_counter_lite">{{data.count}}</div> 
-                        <div ng-switch-default class="col-xs-12 col-md-12 stat_counter">{{data.count}}</div>
+                        <div ng-switch-when="Views of our member pages" class="col-xs-12 col-md-12 stat_counter_lite fade_in">{{data.count}}</div> 
+                        <div ng-switch-default class="col-xs-12 col-md-12 stat_counter fade_in">{{data.count}}</div>
                      </div>
-                     <div class="col-xs-12 col-md-12 stat_title"><strong>{{data.countTxt}}</strong></div>
+                     <div class="col-xs-12 col-md-12 stat_title fade_in"><strong>{{data.countTxt}}</strong></div>
                      
-                     <div class="col-xs-12 col-sm-12 col-md-12 participants_text"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{data.participantsTxt}}</div></div></div>
-                     <div class="col-xs-12 col-md-12 participant_total_count">{{data.participantCount | number}}</div>
+                     <div class="col-xs-12 col-sm-12 col-md-12 participants_text fade_in"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{data.participantsTxt}}</div></div></div>
+                     <div class="col-xs-12 col-md-12 participant_total_count fade_in">{{data.participantCount | number}}</div>
             
         </div>
         <div class="row text-left  panel_gradient_mobile visible-xs-block visible-sm-block" >
                                     
-                     <div class="col-xs-2 icon_placing" ng-switch on="data.countTxt">
+                     <div class="col-xs-2 icon_placing move_to_right" ng-switch on="data.countTxt">
                          <div ng-switch-when="Buyer logins" class="icon-login_Icon"></div>
                          <div ng-switch-when="Searches" class="icon-user_Icon"></div>
                          <div ng-switch-when="Views of our member pages" class="icon-view_Icon"></div>
                      </div>
                      
                      <div ng-switch on="data.countTxt">
-                        <div ng-switch-when="Views of our member pages" class="col-xs-10 stat_counter_lite">{{data.count}}</div> 
-                        <div ng-switch-default class="col-xs-10 stat_counter">{{data.count}}</div>
+                        <div ng-switch-when="Views of our member pages" class="col-xs-10 stat_counter_lite fade_in">{{data.count}}</div> 
+                        <div ng-switch-default class="col-xs-10 stat_counter fade_in">{{data.count}}</div>
                      </div>
-                     <div class="col-xs-10 col-xs-offset-2 stat_title"><strong>{{data.countTxt}}</strong></div>
+                     <div class="col-xs-10 col-xs-offset-2 stat_title fade_in"><strong>{{data.countTxt}}</strong></div>
                      
-                     <div class="col-xs-10 col-xs-offset-2 participants_text"><div class="row"><div class="col-xs-8">{{data.participantsTxt}}</div></div></div>
-                     <div class="col-xs-10 col-xs-offset-2  participant_total_count">{{data.participantCount | number}}</div>
+                     <div class="col-xs-10 col-xs-offset-2 participants_text fade_in"><div class="row"><div class="col-xs-8">{{data.participantsTxt}}</div></div></div>
+                     <div class="col-xs-10 col-xs-offset-2  participant_total_count fade_in">{{data.participantCount | number}}</div>
             
         </div>
     </div>
@@ -62,43 +62,44 @@
         
         
         <div class="row text-left panel_content panel_gradient hidden-xs hidden-sm" >
-                     <div class="col-xs-12 col-md-12" ng-switch on="traffic.countTxt">
-                         <div ng-switch-when="Total vists" class="icon-totalvisits_Icon"></div>
+                     <div class="col-xs-12 col-md-12 move_to_left" ng-switch on="traffic.countTxt">
+                         <div ng-switch-when="Total vists"  class="icon-totalvisits_Icon"></div>
                          <div ng-switch-when="Unique visitors" class="icon-user_Icon"></div>
                          <div ng-switch-when="Total time spent on page" class="icon-totaltimespent_Icon"></div>
                      </div>
                     
-                     <div ng-switch on="traffic.countTxt">
+                     <div class="fade_in" ng-switch on="traffic.countTxt">
                         <div ng-switch-when="Total time spent on page" class="col-xs-12 col-md-12 stat_counter_lite">{{traffic.count.split(" ")[0]}}<span class="stat_counter_lite_extra"> {{traffic.count.split(" ")[1]}}</span></div> 
                         <div ng-switch-default class="col-xs-12 col-md-12 stat_counter">{{traffic.count.split(" ")[0]}}</div>
                      </div>
-                     <div class="col-xs-12 col-md-12 stat_title"><strong>{{traffic.countTxt}}</strong></div>
+                     <div class="col-xs-12 col-md-12 stat_title fade_in"><strong>{{traffic.countTxt}}</strong></div>
                      
-                     <div class="col-xs-12 col-sm-12 col-md-12 participants_text"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{traffic.participantsTxt}}</div></div></div>
-                     <div class="col-xs-12 col-md-12 participant_total_count">{{traffic.participantCount.split(" ")[0]}}<span class="participant_total_count_extra"> {{traffic.participantCount.split(" ")[1]}}</span></div>
+                     <div class="col-xs-12 col-sm-12 col-md-12 participants_text fade_in"><div class="row"><div class="col-md-6 col-sm-4 col-xs-8">{{traffic.participantsTxt}}</div></div></div>
+                     <div class="col-xs-12 col-md-12 participant_total_count fade_in">{{traffic.participantCount.split(" ")[0]}}<span class="participant_total_count_extra"> {{traffic.participantCount.split(" ")[1]}}</span></div>
         </div>
     
         <div class="row text-left panel_gradient_mobile visible-xs-block visible-sm-block" >
-                     <div class="col-xs-2 icon_placing"  ng-switch on="traffic.countTxt">
+                     <div class="col-xs-2 icon_placing move_to_right"  ng-switch on="traffic.countTxt">
                          <div ng-switch-when="Total vists" class="icon-totalvisits_Icon"></div>
                          <div ng-switch-when="Unique visitors" class="icon-user_Icon"></div>
                          <div ng-switch-when="Total time spent on page" class="icon-totaltimespent_Icon"></div>
                      </div>
                     
-                     <div ng-switch on="traffic.countTxt">
+                     <div class="fade_in" ng-switch on="traffic.countTxt">
                         <div ng-switch-when="Total time spent on page" class="col-xs-10 stat_counter_lite">{{traffic.count.split(" ")[0]}}<span class="stat_counter_lite_extra"> {{traffic.count.split(" ")[1]}}</span></div> 
                         <div ng-switch-default class="col-xs-10 stat_counter">{{traffic.count.split(" ")[0]}}</div>
                      </div>
-                     <div class="col-xs-10 col-xs-offset-2  stat_title"><strong>{{traffic.countTxt}}</strong></div>
+                     <div class="col-xs-10 col-xs-offset-2  stat_title fade_in"><strong>{{traffic.countTxt}}</strong></div>
                      
-                     <div class="col-xs-10 col-xs-offset-2  participants_text"><div class="row"><div class="col-xs-8">{{traffic.participantsTxt}}</div></div></div>
-                     <div class="col-xs-10 col-xs-offset-2  participant_total_count">{{traffic.participantCount.split(" ")[0]}}<span class="participant_total_count_extra"> {{traffic.participantCount.split(" ")[1]}}</span></div>
+                     <div class="col-xs-10 col-xs-offset-2  participants_text fade_in"><div class="row"><div class="col-xs-8">{{traffic.participantsTxt}}</div></div></div>
+                     <div class="col-xs-10 col-xs-offset-2  participant_total_count fade_in">{{traffic.participantCount.split(" ")[0]}}<span class="participant_total_count_extra"> {{traffic.participantCount.split(" ")[1]}}</span></div>
             </div>
     
     </div>
     </div>
 </div>
 
-<div class="col-xs-12 col-md-12" ng-if="main.showSummaryContent">
-    <button class="btn btn-lg btn-block" ng-click="main.Animate()">Mock Live Stats</button>
+
+<div class="col-xs-12 col-sm-12 col-md-12" ng-if="main.showSummaryContent">
+    <button class="btn btn-lg btn-block" ng-click="main.SimulateStats()">Mock Live Stats</button>
 </div>

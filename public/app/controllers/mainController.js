@@ -7,6 +7,7 @@ angular.module('statusApp')
     vm.showSummaryContent = true;
     vm.summaryData = {};
     vm.memberTrafficData = {};
+    vm.hidden =false;
     
     var statsKeeper = {};
     var incrementBuyerStats, incrementSearchStats, incrementViewMemberStats;
@@ -26,6 +27,10 @@ angular.module('statusApp')
             console.log(data);  
         });   
     }
+    
+    vm.fadeIt = function(){
+      vm.hidden= !vm.hidden;  
+    };
     
     function storeSummaryData(summary)
     {
@@ -60,24 +65,26 @@ angular.module('statusApp')
           vm.summaryTab = 'unselected_tab';
           vm.trafficTab = 'selected_tab';
           
-           vm.showMemberContent = true;
+          vm.showMemberContent = true;
           vm.showSummaryContent = false;
+          
       }  
     };
     
-    vm.Animate = function(){
+    vm.SimulateStats = function(){
        if(vm.showSummaryContent)
        {
         
         _.forEach(vm.summaryData, function(summary){
             statsKeeper[createStatKey.call(summary.countTxt)] = summary.count;
+            statsKeeper[createStatKey.call(summary.countTxt)+'participant'] = summary.participantCount;
             summary.participantCount -= summary.count; 
             summary.count = 0;
         });
         
-        incrementBuyerStats = $interval(animateStats.bind(vm.summaryData[0]),500);
-        incrementSearchStats = $interval(animateStats.bind(vm.summaryData[1]),200);
-        incrementViewMemberStats = $interval(animateStats.bind(vm.summaryData[2]),100);   
+        incrementBuyerStats = $interval(incrementStats.bind(vm.summaryData[0]),700);
+        incrementSearchStats = $interval(incrementStats.bind(vm.summaryData[1]),400);
+        incrementViewMemberStats = $interval(incrementStats.bind(vm.summaryData[2]),300);   
        }
     };
     
@@ -86,7 +93,7 @@ angular.module('statusApp')
         return this.split(' ').join('').toLowerCase();
     }
     
-    function animateStats()
+    function incrementStats()
     {
         if(this.count < statsKeeper[createStatKey.call(this.countTxt)])
         {
@@ -98,7 +105,7 @@ angular.module('statusApp')
         }
     }
     
-    function stopInterval(stat){
+    function stopInterval(){
         if(angular.isDefined(incrementBuyerStats) && this === 'buyerlogin' )
         {
             $interval.cancel(incrementBuyerStats);    

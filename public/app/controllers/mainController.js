@@ -84,7 +84,7 @@ angular.module('statusApp')
         
         incrementBuyerStats = $interval(incrementStats.bind(vm.summaryData[0]),700);
         incrementSearchStats = $interval(incrementStats.bind(vm.summaryData[1]),400);
-        incrementViewMemberStats = $interval(incrementStats.bind(vm.summaryData[2]),300);   
+        incrementViewMemberStats = $interval(incrementStats.bind(vm.summaryData[2]),200);   
        }
     };
     
